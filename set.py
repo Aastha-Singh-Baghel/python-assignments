@@ -10,14 +10,14 @@ for element in set_a:
     print()
 
 #Union of the elements
-print("Unioon of the elements")
+print("Union of the elements")
 set_b={40,50,60,70,80}
 print("Set B:",set_b)
 union_set=set_a.union(set_b)
 print("Union of Set A and Set B:",union_set)
 
 #Intersection of the elements 
-print("\n Intersectionof the elements")
+print("\n Intersection of the elements")
 intersection_set=set_a.intersection(set_b)
 print("Intersection of Set A and Set B:",intersection_set)
 
@@ -28,3 +28,4 @@ print("Difference of Set A-Set B:",difference_set_a_b)
 
 difference_set_b_a=set_b.difference(set_a)#Elements in B but not in A
 print ("Difference of Set B-Set A:",difference_set_b_a)
+
