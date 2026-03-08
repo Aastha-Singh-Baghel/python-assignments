@@ -1,64 +1,30 @@
 class BankAccount:
-    def __init__(self, account_number, initial_balance=0):
-        """
-        Initialize the bank account with an account number and an optional initial balance.
-        :param account_number: str
-        :param initial_balance: float
-        """
+    def __init__(self, account_number, balance=0):
         self.account_number = account_number
-        self.balance = initial_balance
+        self.balance = balance
 
+    # Method to deposit money
     def deposit(self, amount):
-        """
-        Deposit money into the account.
-        :param amount: float
-        """
-        if amount > 0:
-            self.balance += amount
-            print(f"Deposited {amount:.2f}. New balance: {self.balance:.2f}")
-        else:
-            print("Deposit amount must be positive.")
+        self.balance += amount
+        print("Deposited:", amount)
 
+    # Method to withdraw money
     def withdraw(self, amount):
-        """
-        Withdraw money from the account.
-        :param amount: float
-        """
-        if amount > 0:
-            if amount <= self.balance:
-                self.balance -= amount
-                print(f"Withdrew {amount:.2f}. New balance: {self.balance:.2f}")
-            else:
-                print("Insufficient balance.")
+        if amount <= self.balance:
+            self.balance -= amount
+            print("Withdrawn:", amount)
         else:
-            print("Withdrawal amount must be positive.")
+            print("Insufficient balance")
 
+    # Method to check balance
     def check_balance(self):
-        """
-        Check and return the current balance of the account.
-        """
-        print(f"Current balance: {self.balance:.2f}")
-        return self.balance
+        print("Current Balance:", self.balance)
 
-# Example usage:
-if __name__ == "__main__":
-    # Create a new account with an initial balance of 1000
-    account = BankAccount("123456789", 1000)
 
-    while True:
-        print("\n1. Check Balance\n2. Deposit Money\n3. Withdraw Money\n4. Exit")
-        choice = input("Enter your choice: ")
+# Creating an object of the class
+account = BankAccount("12345", 1000)
 
-        if choice == "1":
-            account.check_balance()
-        elif choice == "2":
-            amount = float(input("Enter amount to deposit: "))
-            account.deposit(amount)
-        elif choice == "3":
-            amount = float(input("Enter amount to withdraw: "))
-            account.withdraw(amount)
-        elif choice == "4":
-            print("Exiting. Have a nice day!")
-            break
-        else:
-            print("Invalid choice. Please try again.")
+# Using methods
+account.deposit(500)
+account.withdraw(300)
+account.check_balance()
