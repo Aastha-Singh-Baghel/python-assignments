@@ -17,8 +17,7 @@ print("Added 'profession':",my_dict)
 
 #Removing Elements
 print("\n Removing Elements")
-removed_value=my_dict.pop("city")#Removing a specific key
-print(f"Remove'city':{removed_value}")
+my_dict.pop("city")#Removing a specific key
 print("Dictionary After removing 'city':",my_dict)
 
 del my_dict["name"]#deleting a key value pair
@@ -37,4 +36,3 @@ print("Dictionary 2:",dict2)
 merged_dict=dict1.copy()#copy dict1 into a new dictionary
 merged_dict.update(dict2)#merge dict2 into the new dictionary
 print("Merged Dictionary:",merged_dict)
-

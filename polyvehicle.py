@@ -1,14 +1,22 @@
 class Vehicle:
     def move(self):
-        print("This vehicle is moving.")
-class car(Vehicle):
+        print("Vehicle is moving")
+
+
+class Car(Vehicle):
     def move(self):
         print("Driving on the road")
+
+
 class Bicycle(Vehicle):
     def move(self):
-        print("pedaling on the road")
-#demonstrating polymorphism
-Vehicle = [car(), Bicycle()]
+        print("Pedaling on the road")
 
-for Vehicle in Vehicle:
-    Vehicle.move()
+
+# Creating objects
+car = Car()
+bicycle = Bicycle()
+
+# Demonstrating polymorphism
+car.move()
+bicycle.move()

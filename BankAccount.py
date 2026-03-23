@@ -25,6 +25,6 @@ class BankAccount:
 account = BankAccount("12345", 1000)
 
 # Using methods
-account.deposit(500)
-account.withdraw(300)
+account.deposit(300)
+account.withdraw(500)
 account.check_balance()

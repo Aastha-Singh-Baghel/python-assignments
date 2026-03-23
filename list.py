@@ -5,7 +5,7 @@ print("created list:",my_list)
 print("Access Element at Index 2:",my_list[2])
 
 #Add and Remove list Elements 
-print("\n Add and REmove List Elements")
+print("\n Add and Remove List Elements")
 my_list.append(60)
 print("List After Adding 60:",my_list)
 
@@ -15,8 +15,7 @@ print("List After Inserting 25 at Index 2:",my_list)
 my_list.remove(30)
 print("List After Removing 30:",my_list)
 
-popped_element =my_list.pop()
-print("popped element:",popped_element)
+my_list.pop()
 print("List After Popping last element:",my_list)
 
 #Sort list elements 
