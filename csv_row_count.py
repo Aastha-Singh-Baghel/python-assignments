@@ -1,14 +1,20 @@
 import csv
 
-file = open("student.csv", "r")
+# Take filename from user
+filename = input("Enter CSV file name: ")
 
-reader = csv.reader(file)
+try:
+    with open(filename, 'r') as file:
+        reader = csv.reader(file)
+        
+        row_count = 0
+        
+        for row in reader:
+            row_count += 1
+        
+        print("Total number of rows:", row_count)
 
-count = 0
-
-for row in reader:
-    count = count + 1
-
-print(count)
-
-file.close()
+except FileNotFoundError:
+    print("File not found. Please check the file name.")
+except PermissionError:
+    print("Permission denied to read the file.")
