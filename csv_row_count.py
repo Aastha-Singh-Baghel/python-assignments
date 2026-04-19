@@ -1,12 +1,12 @@
-# Take filename from user
-filename = input("Enter CSV file name: ")
+import csv
 
-try:
-    with open(filename, 'r') as file:
-        lines = file.readlines()
-        print("Total number of rows:", len(lines))
+file_name = input("Enter CSV file name: ")
 
-except FileNotFoundError:
-    print("File not found.")
-except PermissionError:
-    print("Permission denied.")
+with open(file_name, 'r') as file:
+    reader = csv.reader(file)
+    row_count = 0
+    
+    for row in reader:
+        row_count += 1
+
+print("Total number of rows:", row_count)
